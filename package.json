@@ -17,10 +17,10 @@
   "author": "nghia",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.18.1",
     "express-handlebars": "^6.0.6"
   },
   "devDependencies": {
-    "express": "^4.18.1",
     "morgan": "^1.10.0",
     "node-sass": "^7.0.1",
     "nodemon": "^2.0.19"
