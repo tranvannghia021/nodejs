@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --inspect ./src/index.js",
+    "serve": "concurrently --kill orthers \" npm start \" \" npm run scss \"",
+    "start": "nodemon --inspect ./src/index.js ",
     "scss": "node-sass --watch src/resources/scss/ --output src/public/css/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,10 +18,17 @@
   "author": "nghia",
   "license": "ISC",
   "dependencies": {
-    "express-handlebars": "^6.0.6"
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.5.2",
+    "mongoose-delete": "^0.5.4",
+    "mongoose-sequence": "^5.3.1",
+    "mongoose-slug-generator": "^1.0.4"
   },
   "devDependencies": {
-    "express": "^4.18.1",
+    "concurrently": "^7.3.0",
     "morgan": "^1.10.0",
     "node-sass": "^7.0.1",
     "nodemon": "^2.0.19"
